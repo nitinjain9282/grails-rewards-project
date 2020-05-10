@@ -19,6 +19,11 @@ class InventoryController {
         // define map or key:value pair to be sent to view, it will be referred by key name only. usually key is same as value for simplicity.
         [product:productName , sku:sku]
         // next we create view- which will be same name as controler.
+    }
 
+    // get data from Prodcut database.
+    def list() {
+        def allProducts = Product.list()  // allProducts variable will hold table data.
+        [allProducts:allProducts]   // passing data to view
     }
 }
