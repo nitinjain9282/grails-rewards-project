@@ -7,6 +7,7 @@ class Product {
     String sku
     Float price
 
+    static hasMany = [orderitems:Orderitem]
 
     static constraints = {
     }
